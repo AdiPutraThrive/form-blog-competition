@@ -50,7 +50,7 @@
 
     @stack('styles')
     @livewireStyles
-    @vite([])
+    
 </head>
 
 <body>

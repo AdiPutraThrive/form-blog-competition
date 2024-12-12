@@ -72,7 +72,7 @@
 
     @livewireStyles
 
-    @vite([])
+    
 </head>
 
 <body>
