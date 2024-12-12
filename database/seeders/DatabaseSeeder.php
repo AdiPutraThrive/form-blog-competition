@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         \App\Models\User::factory()->create([
-            'name' => 'admin thrive',
+            'name' => 'User Admin',
             'email' => 'admin@thriveagency.id',
         ]);
     }

@@ -3,7 +3,9 @@
     data-assets-path="{{ asset('admin/') }}" data-template="vertical-menu-template-free">
 
 <head>
-    <title>{{ $title ?? 'Thrive Web Blog Competition 2024' }} - Perusahaan IT Terbaik Sejak 2007 di Indonesia</title>
+    <title>
+        {{ $title ?? 'Ariston Blog Competition 2024' }} - Ariston Indonesia
+    </title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Required meta tags -->
@@ -81,8 +83,9 @@
 
             <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
                 <div class="app-brand demo">
-                    <a href="/" class="app-brand-link">
-                        <span class="app-brand-text demo menu-text fw-bolder ms-2">Thrive</span>
+                    <a href="/home" class="app-brand-link">
+                        <img src="{{ asset('/assets/img/Logo.png') }}" alt="Bootstrap" width="150">
+
                     </a>
 
                     <a href="javascript:void(0);"
@@ -188,7 +191,7 @@
                                 <script>
                                     document.write(new Date().getFullYear());
                                 </script>
-                                <span class="footer-link fw-bolder">Thrive Web Blog Competition</span>
+                                <span class="footer-link fw-bolder">Web Blog Competition</span>
                             </div>
 
                         </div>

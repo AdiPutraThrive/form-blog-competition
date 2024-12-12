@@ -26,7 +26,7 @@ state([
 rules([
     'fullname' => 'required|string|max:255',
     'email' => 'required|email|max:255',
-    'whatsapp' => 'required|numeric|digits_between:11,12',
+    'whatsapp' => 'required|numeric|digits_between:11,13',
     'blog_link' => 'required|url|max:255',
     'document' => 'required|file|max:5120|mimes:pdf,doc,docx',
     'follows.*' => 'required|file|max:5120|mimes:pdf,jpg,jpeg',
@@ -258,7 +258,7 @@ $updatedDocument = function () {
                     <div class="card-body">
                         <div class="mb-3">
                             <label for="imageInput" class="form-label">
-                                Bukti follow akun social media Thrive Indonesia
+                                Bukti follow akun social media Ariston Indonesia
                                 <span wire:loading wire:target='follows' class="spinner-border spinner-border-sm mx-3"
                                     role="status">
                                 </span>

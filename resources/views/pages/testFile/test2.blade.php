@@ -43,7 +43,7 @@ $removeUploadedFile = function ($filename, $files) {
 ?>
 <x-guest-layout>
     <x-slot name="title">
-        Thrive Blog Competition 2024
+        Blog Competition 2024
     </x-slot>
 
 

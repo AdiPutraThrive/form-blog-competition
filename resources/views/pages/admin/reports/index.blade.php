@@ -12,7 +12,7 @@ state(['participants' => fn() => Participant::latest()->get()])->url();
 
 
 <x-admin-layout>
-    <x-slot name="title">Laporan Thrive Blog Competition 2024</x-slot>
+    <x-slot name="title">Laporan Blog Competition 2024</x-slot>
     @include('layouts.datatables')
     @volt
         <div>

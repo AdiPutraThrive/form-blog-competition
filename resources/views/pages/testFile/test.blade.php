@@ -47,7 +47,7 @@ $updatedDocument = function () {
 ?>
 <x-guest-layout>
     <x-slot name="title">
-        Thrive Blog Competition 2024
+        Blog Competition 2024
     </x-slot>
     <style>
         #dropZone {
@@ -67,7 +67,7 @@ $updatedDocument = function () {
 
             <div class="card">
                 <label for="imageInput" class="form-label">
-                    Bukti follow akun social media Thrive Indonesia
+                    Bukti follow akun social media Indonesia
                 </label>
                 <div class="card-body">
                     <label for="imageInput">
