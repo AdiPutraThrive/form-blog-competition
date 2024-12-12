@@ -3,39 +3,42 @@
     data-assets-path="{{ asset('admin/') }}" data-template="vertical-menu-template-free">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-
+    <title>{{ $title ?? 'Thrive Web Blog Competition 2024' }} - Perusahaan IT Terbaik Sejak 2007 di Indonesia</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ $title ?? 'Thrive Web Blog Competition 2024' }} - Perusahaan IT Terbaik Sejak 2007 di Indonesia</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+    <meta name="title" content="Ariston Blog Competition 2024 - Ariston Indonesia">
     <meta name="description"
-        content="Temukan berbagai solusi dan produk IT untuk beragam kebutuhan bisnis dan perusahaan. Bangun bisnis Anda bersama Thrive!">
-    <meta name="keywords" content="Thrive, perusahaan IT, solusi IT, produk IT, bisnis, teknologi, Indonesia">
-    <meta name="author" content="Thrive">
+        content="Ikuti Ariston Blog Competition 2024 dan bagikan tips memilih water heater yang baik. Raih kesempatan memenangkan berbagai hadiah menarik bersama Ariston!">
+    <meta name="keywords"
+        content="Ariston, Blog Competition 2024, Ariston Indonesia, water heater, tips memilih, kenyamanan rumah, teknologi rumah">
+    <meta name="author" content="Ariston Indonesia">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Thrive - Perusahaan IT Terbaik Sejak 2007 di Indonesia">
+    <meta property="og:title" content="Ariston Blog Competition 2024 - Ariston Indonesia">
     <meta property="og:description"
-        content="Temukan berbagai solusi dan produk IT untuk beragam kebutuhan bisnis dan perusahaan. Bangun bisnis Anda bersama Thrive!">
-    <meta property="og:image" content="https://www.thrive.co.id/images/logo-thrive.png">
-    <meta property="og:url" content="https://www.thrive.co.id">
-    <meta property="og:site_name" content="Thrive">
+        content="Ikuti Ariston Blog Competition 2024 dan bagikan tips memilih water heater yang baik. Raih kesempatan memenangkan berbagai hadiah menarik bersama Ariston!">
+    <meta property="og:image"
+        content="https://ariston.kleecks-cdn.com/cms/wpmedia/2022/02/14081808/RrY0fuYi-Logo_Ariston_payoff_280x92_OLD.svg">
+    <meta property="og:url" content="https://www.ariston.com/id-id">
+    <meta property="og:site_name" content="Ariston Indonesia">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Thrive - Perusahaan IT Terbaik Sejak 2007 di Indonesia">
+    <meta name="twitter:title" content="Ariston Blog Competition 2024 - Ariston Indonesia">
     <meta name="twitter:description"
-        content="Temukan berbagai solusi dan produk IT untuk beragam kebutuhan bisnis dan perusahaan. Bangun bisnis Anda bersama Thrive!">
-    <meta name="twitter:image" content="https://www.thrive.co.id/images/logo-thrive.png">
-    <meta name="twitter:url" content="https://www.thrive.co.id">
-    <meta name="twitter:site" content="@Thrive">
+        content="Ikuti Ariston Blog Competition 2024 dan bagikan tips memilih water heater yang baik. Raih kesempatan memenangkan berbagai hadiah menarik bersama Ariston!">
+    <meta name="twitter:image"
+        content="https://ariston.kleecks-cdn.com/cms/wpmedia/2022/02/14081808/RrY0fuYi-Logo_Ariston_payoff_280x92_OLD.svg">
+    <meta name="twitter:url" content="https://twitter.com/aristonid">
+    <meta name="twitter:site" content="@AristonID">
 
-    <link rel="shortcut icon" type="image/png" href="https://www.thrive.co.id/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('/assets/img/favicon/favicon.ico') }}">
 
     <!-- Assets -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -66,6 +69,8 @@
     @stack('styles')
 
     @livewireStyles
+
+    @vite([])
 </head>
 
 <body>
@@ -212,17 +217,13 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js') }}"></script>
 
-
-    <script type="text/javascript">
-        setTimeout(function() {
-
-            // Closing the alert
-            $('.toast').alert('close');
-        }, 5000);
-    </script>
-
     @stack('scripts')
+
     @livewireScripts
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <x-livewire-alert::scripts />
 
 </body>
 

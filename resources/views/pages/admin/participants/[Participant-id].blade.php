@@ -1,8 +1,10 @@
 <?php
 
-use function Livewire\Volt\{state, on};
+use function Livewire\Volt\{state, on, uses};
 use App\Models\Participant;
 use function Laravel\Folio\name;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
+uses(LivewireAlert::class); // Tambahkan trait LivewireAlert
 
 name('participants.show');
 
@@ -25,7 +27,10 @@ $download = function () {
         return Storage::download($filePath);
     }
 
-    $this->dispatch('download-failed');
+    $this->alert('success', 'Data gagal di download!', [
+        'position' => 'center',
+        'timer' => 3000,
+    ]);
 };
 
 on([
@@ -50,6 +55,11 @@ $statusReject = function () {
 $descriptionSaved = function () {
     Participant::whereId($this->participant->id)->update([
         'description' => $this->description,
+    ]);
+
+    $this->alert('success', 'Data telah diupdate!', [
+        'position' => 'center',
+        'timer' => 3000,
     ]);
 };
 
@@ -80,7 +90,7 @@ $descriptionSaved = function () {
                 <div class="card-body">
                     <div class="bg-label-primary rounded-3 text-center mb-3 pt-4">
                         <img class="img-fluid w-60"
-                            src="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/assets/img/illustrations/sitting-girl-with-laptop-dark.png"
+                            src="http://127.0.0.1:8000/assets/img/illustrations/man-with-laptop-light.png"
                             alt="Card girl image">
                     </div>
                     <div class="mb-3 row">
@@ -89,12 +99,18 @@ $descriptionSaved = function () {
                             :
                             <p class="ms-1">
                                 {{ $participant->fullname ?? '' }}
-                                <span
-                                    class="badge {{ $participant->status == 'MENUNGGU' ? 'bg-warning' : ($participant->status == 'TERIMA' ? 'bg-success' : 'bg-danger') }}">
-                                    {{ $participant->status }}
-                                </span>
-                                </h6>
+                            </p>
 
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <p class="col-md-3 fw-bold">Status</p>
+                        <div class="col-md-9 d-flex">
+                            :
+                            <p
+                                class="ms-1 badge {{ $participant->status == 'MENUNGGU' ? 'bg-warning' : ($participant->status == 'TERIMA' ? 'bg-success' : 'bg-danger') }}">
+                                {{ $participant->status }}
+                            </p>
                         </div>
                     </div>
                     <div class="mb-3 row">

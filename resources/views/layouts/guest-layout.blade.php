@@ -3,40 +3,39 @@
 
 <head>
     <title>
-        {{ $title ?? 'Thrive Blog Competition 2024' }} - Perusahaan IT Terbaik Sejak 2007 di Indonesia
+        {{ $title ?? 'Ariston Blog Competition 2024' }} - Ariston Indonesia
     </title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <meta name="title" content="Thrive Blog Competition 2024 - Perusahaan IT Terbaik Sejak 2007 di Indonesia">
+    <meta name="title" content="Ariston Blog Competition 2024 - Ariston Indonesia">
     <meta name="description"
-        content="Ikuti Thrive Blog Competition 2024 dan menangkan berbagai hadiah menarik. Temukan berbagai solusi dan produk IT untuk beragam kebutuhan bisnis dan perusahaan bersama Thrive!">
+        content="Ikuti Ariston Blog Competition 2024 dan bagikan tips memilih water heater yang baik. Raih kesempatan memenangkan berbagai hadiah menarik bersama Ariston!">
     <meta name="keywords"
-        content="Thrive, Blog Competition 2024, perusahaan IT, solusi IT, produk IT, bisnis, teknologi, Indonesia">
-    <meta name="author" content="Thrive">
+        content="Ariston, Blog Competition 2024, Ariston Indonesia, water heater, tips memilih, kenyamanan rumah, teknologi rumah">
+    <meta name="author" content="Ariston Indonesia">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Thrive Blog Competition 2024 - Perusahaan IT Terbaik Sejak 2007 di Indonesia">
+    <meta property="og:title" content="Ariston Blog Competition 2024 - Ariston Indonesia">
     <meta property="og:description"
-        content="Ikuti Thrive Blog Competition 2024 dan menangkan berbagai hadiah menarik. Temukan berbagai solusi dan produk IT untuk beragam kebutuhan bisnis dan perusahaan bersama Thrive!">
-    <meta property="og:image" content="https://www.thrive.co.id/images/logo-thrive.png">
-    <meta property="og:url" content="https://www.thrive.co.id">
-    <meta property="og:site_name" content="Thrive">
+        content="Ikuti Ariston Blog Competition 2024 dan bagikan tips memilih water heater yang baik. Raih kesempatan memenangkan berbagai hadiah menarik bersama Ariston!">
+    <meta property="og:image" content="https://ariston.kleecks-cdn.com/cms/wpmedia/2022/02/14081808/RrY0fuYi-Logo_Ariston_payoff_280x92_OLD.svg">
+    <meta property="og:url" content="https://www.ariston.com/id-id">
+    <meta property="og:site_name" content="Ariston Indonesia">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Thrive Blog Competition 2024 - Perusahaan IT Terbaik Sejak 2007 di Indonesia">
+    <meta name="twitter:title" content="Ariston Blog Competition 2024 - Ariston Indonesia">
     <meta name="twitter:description"
-        content="Ikuti Thrive Blog Competition 2024 dan menangkan berbagai hadiah menarik. Temukan berbagai solusi dan produk IT untuk beragam kebutuhan bisnis dan perusahaan bersama Thrive!">
-    <meta name="twitter:image" content="https://www.thrive.co.id/images/logo-thrive.png">
-    <meta name="twitter:url" content="https://www.thrive.co.id">
-    <meta name="twitter:site" content="@Thrive">
+        content="Ikuti Ariston Blog Competition 2024 dan bagikan tips memilih water heater yang baik. Raih kesempatan memenangkan berbagai hadiah menarik bersama Ariston!">
+    <meta name="twitter:image" content="https://ariston.kleecks-cdn.com/cms/wpmedia/2022/02/14081808/RrY0fuYi-Logo_Ariston_payoff_280x92_OLD.svg">
+    <meta name="twitter:url" content="https://twitter.com/aristonid">
+    <meta name="twitter:site" content="@AristonID">
 
-    <link rel="shortcut icon" type="image/png" href="https://www.thrive.co.id/images/favicon.png">
-
+    <link rel="shortcut icon" type="image/png" href="{{ asset('/assets/img/favicon/favicon.ico') }}">
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -46,21 +45,19 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
 
     <link rel="stylesheet" href="{{ asset('/assets/css/custom.css') }}">
+
     @stack('styles')
     @livewireStyles
-    
+
 </head>
 
 <body>
-    <div class="container-fluid col-10 col-lg-8 pt-5">
+    <div class="container pt-5">
         <header>
-            <img src="{{ asset('/assets/img/Image_Banner.svg') }}" class="img-fluid rounded" width="100%"
-                alt="{{ $title ?? '' }}">
-
             <div class="card border-responsive my-3">
                 <div class="card-body">
                     <h6 class="title text-capitalize text-center fw-semibold responsive-font">
-                        Thrive
+                        Ariston Indonesia
                         Blog Competition 2024
                     </h6>
                 </div>

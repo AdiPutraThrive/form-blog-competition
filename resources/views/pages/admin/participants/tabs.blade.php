@@ -54,11 +54,6 @@
                     <span class="visually-hidden">
                         Loading...</span>
                 </div>
-
-                <x-alert on="download-failed" class="text-danger fw-bold">
-                    Error
-                    <i class="bi bi-x-octagon text-danger"></i>
-                </x-alert>
             </div>
             </p>
         @endif

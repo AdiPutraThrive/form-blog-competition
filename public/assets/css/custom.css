@@ -6,12 +6,17 @@
     font-style: normal;
 }
 
+*{
+    font-family: "DM Sans", sans-serif;
+
+}
+
 body {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    background: #F3ECE6;
+    background-image: url('/assets/img/BG.png');
 
     /* font-size: 16px;
     background: url('/background-form.png');
@@ -147,54 +152,54 @@ body {
 
 /* custom color btn */
 .color-custom {
-    color: #E17126;
+    color: #C41230;
 }
 
 .btn-custom {
     color: #fff;
-    background-color: #E17126;
-    border-color: #E17126;
+    background-color: #C41230;
+    border-color: #C41230;
 }
 .btn-custom:hover {
     color: #fff;
-    background-color: #ECB151;
-    border-color: #ECB151;
+    background-color: #E493A1;
+    border-color: #E493A1;
 }
 .btn-custom:focus, .btn-custom.focus {
     color: #fff;
-    background-color: #ECB151;
-    border-color: #ECB151;
+    background-color: #E493A1;
+    border-color: #E493A1;
     box-shadow: 0 0 0 0.2rem rgba(225, 113, 38, 0.5);
 }
 .btn-custom:active, .btn-custom.active, .show > .btn-custom.dropdown-toggle {
     color: #fff;
-    background-color: #DBB67E;
-    border-color: #DBB67E;
+    background-color: #DF7E8E;
+    border-color: #DF7E8E;
 }
 .btn-custom:active:focus, .btn-custom.active:focus, .show > .btn-custom.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(225, 113, 38, 0.5);
 }
 
 .btn-outline-custom {
-    color: #E17126;
+    color: #C41230;
     background-color: transparent;
-    border-color: #E17126;
+    border-color: #C41230;
 }
 .btn-outline-custom:hover {
     color: #fff;
-    background-color: #E17126;
-    border-color: #E17126;
+    background-color: #C41230;
+    border-color: #C41230;
 }
 .btn-outline-custom:focus, .btn-outline-custom.focus {
     color: #fff;
-    background-color: #E17126;
-    border-color: #E17126;
+    background-color: #C41230;
+    border-color: #C41230;
     box-shadow: 0 0 0 0.2rem rgba(225, 113, 38, 0.5);
 }
 .btn-outline-custom:active, .btn-outline-custom.active, .show > .btn-outline-custom.dropdown-toggle {
     color: #fff;
-    background-color: #DBB67E;
-    border-color: #DBB67E;
+    background-color: #DF7E8E;
+    border-color: #DF7E8E;
 }
 .btn-outline-custom:active:focus, .btn-outline-custom.active:focus, .show > .btn-outline-custom.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(225, 113, 38, 0.5);
@@ -209,4 +214,30 @@ body {
     font-weight: bold;
     font-family: Arial, sans-serif;
     color: #bbb;
+}
+
+ /* Accordion Styles */
+ .accordion-button {
+    background-color: #dc3545;
+    /* Merah */
+    color: #fff;
+    /* Warna teks putih */
+    font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #c82333;
+    /* Merah yang lebih gelap saat accordion terbuka */
+    color: #fff;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+    /* Fokus shadow merah */
+}
+
+.accordion-body {
+    /* Warna latar belakang body accordion */
+    color: #343a40;
+    /* Warna teks body accordion */
 }

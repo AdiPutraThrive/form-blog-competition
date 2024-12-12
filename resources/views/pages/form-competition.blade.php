@@ -33,9 +33,8 @@ rules([
 ]);
 
 $save = function () {
-    $this->validate();
-
     try {
+        $this->validate();
         // Menyimpan data participant
         $participant = Participant::create([
             'fullname' => $this->fullname,
@@ -81,7 +80,7 @@ $save = function () {
             'position' => 'center',
             'timer' => 3000,
             'toast' => false,
-            'text' => 'Terjadi kesalahan saat menyimpan data. Silakan coba lagi.',
+            'text' => 'Pastikan Anda telah mengisi semua kolom yang diperlukan dengan benar.',
             'timerProgressBar' => true,
         ]);
     }
@@ -134,11 +133,10 @@ $updatedDocument = function () {
 
 ?>
 <x-guest-layout>
-    @include('pages.modal-form')
 
     @volt
         <div>
-
+            @include('pages.modal-form')
             <form wire:submit='save' method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="card mb-3 border-0">
@@ -177,7 +175,7 @@ $updatedDocument = function () {
                     <div class="card-body">
                         <div class="mb-3">
                             <label for="whatsapp" class="form-label">
-                                No Whatsapp
+                                No whatsapp
                             </label>
                             <input type="number" class="form-control rounded-3" value="{{ old('whatsapp') }}"
                                 wire:model="whatsapp" id="whatsapp" aria-describedby="whatsappId"
@@ -195,8 +193,8 @@ $updatedDocument = function () {
                 <div class="card my-3 border-0">
                     <div class="card-body">
                         <div class="mb-3">
-                            <label for="blog_link" class="form-label">Link atau URL bukti tayang / link publikasi blog
-                                blog</label>
+                            <label for="blog_link" class="form-label">Link atau URL bukti tayang /
+                                link publikasi blog</label>
                             <input type="url" class="form-control rounded-3" value="{{ old('blog_link') }}"
                                 wire:model="blog_link" id="blog_link" aria-describedby="blog_linkId"
                                 placeholder="link atau url" />
@@ -251,8 +249,7 @@ $updatedDocument = function () {
                             <strong>Teknis penamaan file :</strong>
                             Judul Karya Tulis_Nama Lengkap Peserta_Nomor Telepon/HP
                             <br>
-                            <strong>Contoh:</strong> Makin Produktif dengan ET PC Desktop
-                            Workstation_Thrive_08xx-xxxx-xxxx
+                            <strong>Contoh:</strong> Fakta dan Mitos tentang Mandi Air Hangat saat Demam_Ariston_0800000000
                         </small>
                     </div>
                 </div>
@@ -262,9 +259,12 @@ $updatedDocument = function () {
                         <div class="mb-3">
                             <label for="imageInput" class="form-label">
                                 Bukti follow akun social media Thrive Indonesia
+                                <span wire:loading wire:target='follows' class="spinner-border spinner-border-sm mx-3"
+                                    role="status">
+                                </span>
                             </label>
                             <label for="imageInput"
-                                class="{{ $follows ? (count($follows) >= 5 ? 'd-none' : '') : '' }} w-100">
+                                class="{{ $follows ? (count($follows) === 4 ? 'd-none' : '') : '' }} w-100">
                                 <div id="dropZone" class="d-flex align-items-center justify-content-center flex-column">
                                     <p> <i class="bi bi-cloud-arrow-down"></i>
                                     </p>
@@ -282,32 +282,33 @@ $updatedDocument = function () {
                         </div>
 
                         @if (!empty($follows))
-                            @foreach ($follows as $key => $item)
-                                <div class="card my-2">
-                                    <div class="card-body">
-                                        <div class="hstack justify-content-between align-items-center">
-                                            <div class="me-2" style="font-size: 2rem; color: #777;">
-                                                <i class="bi bi-file-earmark-text"></i>
+                            <div class="row">
+                                @foreach ($follows as $key => $item)
+                                    <div class="col col-lg-6">
+                                        <div class="card my-2">
+                                            <div class="card-body">
+                                                <div class="hstack justify-content-between align-items-center">
+                                                    <div class="me-2" style="font-size: 2rem; color: #777;">
+                                                        <i class="bi bi-file-earmark-text"></i>
+                                                    </div>
+                                                    <span class="overflow-hidden text-nowrap">
+                                                        {{ Str::limit($item->getClientOriginalName(), 20, '...') }}
+                                                    </span>
+                                                    <a type="button"
+                                                        wire:click.prevent='removeItem({{ json_encode($key) }})'>
+                                                        <i class="bi bi-x-lg"></i>
+                                                    </a>
+                                                </div>
                                             </div>
-                                            {{ Str::limit($item->getClientOriginalName(), 20, '...') }}
-                                            <a type="button" wire:click.prevent='removeItem({{ json_encode($key) }})'>
-                                                <i class="bi bi-x-lg"></i>
-                                            </a>
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
+                                @endforeach
+                            </div>
                         @endif
 
                         <small class="form-text text-muted m-0">
                             <strong>Upload File Maks 5 MB</strong> (format .pdf, .jpg atau
                             .jpeg)
-                            <br>
-                            <strong>Teknis penamaan file:</strong> Bukti follow_Nama Sosial Media_Akun Sosial Media
-                            Thrive_Nama
-                            Lengkap
-                            <br>
-                            <strong>Contoh:</strong> Bukti follow_Tiktok_@thrive.itsolutions_Thrive
                         </small>
                     </div>
                 </div>
@@ -331,20 +332,20 @@ $updatedDocument = function () {
                             <p>Dan menyatakan :</p>
                             <ol>
                                 <li>
-                                    Keikutsertaan dalam Thrive Indonesia Blog Competition 2024
+                                    Keikutsertaan dalam Ariston Indonesia Blog Competition 2024
                                 </li>
                                 <li>
-                                    Mematuhi segala peraturan dan ketentuan yang telah ditetapkan oleh Thrive Blog
+                                    Mematuhi segala peraturan dan ketentuan yang telah ditetapkan oleh Ariston Blog
                                     Competition
                                     2024
                                 </li>
                                 <li>
-                                    Menyerahkan karya original milik sendiri untuk dapat disertakan pada Thrive Blog
+                                    Menyerahkan karya original milik sendiri untuk dapat disertakan pada Ariston Blog
                                     Competition
                                     2024
                                 </li>
                                 <li>
-                                    Bertanggung jawab penuh atas karya sendiri yang diikutsertakan pada Thrive Blog
+                                    Bertanggung jawab penuh atas karya sendiri yang diikutsertakan pada Ariston Blog
                                     Competition
                                     2024
                                 </li>
@@ -353,26 +354,15 @@ $updatedDocument = function () {
                     </div>
                 </div>
 
-                @if (session()->has('success'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        {{ session('success') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
                 <div class="card my-3 border-0">
                     <div class="card-body">
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-custom">
+                            <button type="submit" class="btn btn-danger">
                                 <span wire:loading.class='d-none'>SUBMIT</span>
                                 <div wire:loading wire:target='save' class="spinner-border spinner-border-sm"
                                     role="status">
-                                    <span class="visually-hidden">Loading...</span>
                                 </div>
                             </button>
-                        </div>
-
-                        <div class="text-center">
-
                         </div>
 
                     </div>

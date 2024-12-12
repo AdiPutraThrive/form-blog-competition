@@ -1,228 +1,111 @@
-<div>
-    <!-- Modal Body -->
-    <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl" role="document">
-            <div class="modal-content">
-                <div class="modal-header m-3">
-                    <h4 class="modal-title fw-bold" id="modalTitleId">
-                        Syarat dan Ketentuan
-                    </h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header m-3">
+                <h4 class="modal-title fw-bold" id="modalTitleId">
+                    Syarat dan Ketentuan
+                </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="accordion" id="termsAccordion">
+                    <!-- General Terms and Conditions -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingGeneral">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseGeneral" aria-expanded="false" aria-controls="collapseGeneral">
+                                General Terms and Conditions
+                            </button>
+                        </h2>
+                        <div id="collapseGeneral" class="accordion-collapse collapse show"
+                            aria-labelledby="headingGeneral" data-bs-parent="#termsAccordion">
+                            <div class="accordion-body">
+                                <ol>
+                                    <li>Participants must be Indonesian citizens (WNI).</li>
+                                    <li>You can use platforms such as Kompasiana, Kumparan, Kaskus, or other UGC
+                                        platforms.</li>
+                                    <li>The jury has the right to disqualify participants who do not meet all applicable
+                                        terms and conditions and/or commit fraud.</li>
+                                    <li>Ariston Indonesia Blog Competition 2024 is free to enter for everyone.</li>
+                                    <li>Ariston Indonesia Blog Competition Submission Period: <strong>20 November 2024 –
+                                            20 December 2024</strong> (Ariston Indonesia has the right to extend the
+                                        time if there are still few participants).</li>
+                                    <li>Ariston Indonesia Blog Competition Judging Process: <strong>15 December 2024 –
+                                            23 December 2024</strong>.</li>
+                                    <li>Ariston Indonesia Blog Competition Winner Announcement: <strong>26 December
+                                            2024</strong>.</li>
+                                    <li>Participants must follow the Ariston Indonesia social media account:
+                                        <ul>
+                                            <li><strong>Instagram Ariston Indonesia:</strong> @ariston.indonesia</li>
+                                            <li><strong>TikTok Ariston Indonesia:</strong> @ariston.indonesia</li>
+                                            <li><strong>Facebook Ariston Indonesia:</strong> AristonIndonesia</li>
+                                            <li><strong>Youtube Ariston Indonesia:</strong> Ariston Indonesia</li>
+                                        </ul>
+                                    </li>
+                                    <li>Ariston Indonesia Blog Competition 2024 Prize: <strong>TBD</strong></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Terms and Conditions -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTechnical">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTechnical" aria-expanded="true"
+                                aria-controls="collapseTechnical">
+                                Technical Terms and Conditions
+                            </button>
+                        </h2>
+                        <div id="collapseTechnical" class="accordion-collapse collapse"
+                            aria-labelledby="headingTechnical" data-bs-parent="#termsAccordion">
+                            <div class="accordion-body">
+                                <ol>
+                                    <li>Writing must be at least 500-800 words in Indonesian, with theme: “Lengkapi
+                                        Kenyamanan Rumah dengan AC dan Water Heater dari Ariston”.</li>
+                                    <li>Blogs that are registered must be owned personally and free from SARA content,
+                                        pornography, gambling, or other prohibited and legal violations.</li>
+                                    <li>Mandatory Keywords:
+                                        <strong>
+                                            "Nyaman di Rumah",
+                                            "Water Heater Ariston",
+                                            "AC Ariston",
+                                            "Mandi Air Hangat",
+                                            "AC Hemat Energi",
+                                            "AC Rumah Sejuk",
+                                        </strong>
+                                    </li>
+                                    <li>Plagiarism is not allowed.</li>
+                                    <li>The writing does not violate the intellectual property rights of any party.</li>
+                                    <li>The writing must be original and never been published before.</li>
+                                    <li>Ensure your blog post adheres to the following criteria:
+                                        <ul>
+                                            <li>Compelling title: Clearly reflect the theme and chosen focus.</li>
+                                            <li>Informative content: Share valuable tips and insights about air
+                                                conditioning.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Writing style: Use clear, concise language and maintain a conversational tone.
+                                    </li>
+                                    <li>Include to your blog a do follow link to the Ariston Indonesia Homepage: <a
+                                            href="https://www.ariston.com/id-id"
+                                            target="_blank">https://www.ariston.com/id-id</a> or link to Ariston water
+                                        heater or AC product here: <a
+                                            href="https://www.ariston.com/id-id/pemanas-air-listrik/tangki"
+                                            target="_blank">https://www.ariston.com/id-id/pemanas-air-listrik/tangki</a>
+                                        and <a href="https://www.ariston.com/id-id/produk/air-conditioner/"
+                                            target="_blank">https://www.ariston.com/id-id/produk/air-conditioner/</a>.
+                                    </li>
+                                    <li>Blog and backlinks must remain and must not be changed after the competition
+                                        ends.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body mx-3">
-                    <section>
-                        <h6 class="fw-bold color-custom">
-                            Syarat dan Ketentuan Umum Thrive Blog Competition 2024
-                        </h6>
-                        <ol>
-                            <li>
-
-                                Peserta Thrive Blog Competition 2024 adalah <strong>Warga Negara Indonesia
-                                    (WNI)</strong>
-                                dan memiliki
-                                <strong>KTP</strong>.
-
-                            </li>
-                            <li>
-
-                                Seluruh peserta dapat mengikuti Thrive Blog Competition 2024 <strong>tanpa dipungut
-                                    biaya</strong>.
-
-                            </li>
-                            <li>
-
-                                Thrive dapat menggunakan seluruh artikel / blog peserta sesuai dengan kebutuhan internal
-                                Thrive di berbagai media komunikasi milik Thrive (dengan tetap mencantumkan sumber
-                                penulis artikel).
-                            </li>
-                            <li>
-
-                                Thrive berhak untuk mendiskualifikasi peserta dan menganulir pemenang yang tidak
-                                memenuhi syarat dan ketentuan atau yang terindikasi melakukan kecurangan dari Thrive
-                                Blog Competition 2024.
-
-                            </li>
-                            <li>
-
-                                Thrive berhak untuk menambah, mengurangi dan atau menghapus syarat dan ketentuan yang
-                                berlaku selama periode Thrive Blog Competition 2024 berlangsung <strong>(jika dipandang
-                                    perlu)</strong>.
-
-                            </li>
-                            <li>
-
-                                Periode pendaftaran dan publikasi artikel / blog pada Thrive Blog Competition 2024
-                                adalah : <strong>1 Juli 2024 – 31 Agustus 2024</strong>.
-
-                            </li>
-                            <li>
-
-                                Pengumuman pemenang Thrive Blog Competition 2024 adalah : 20 September 2024.
-
-                            </li>
-                            <li>
-
-                                Hadiah untuk masing-masing pemenang Thrive Blog Competition 2024 adalah sebagai berikut:
-                                <ul>
-                                    <li>
-
-                                        <strong>Pemenang 1</strong>
-                                        akan mendapatkan uang tunai
-                                        <strong>Rp5.000.000</strong>
-
-                                    </li>
-                                    <li>
-
-                                        <strong>Pemenang 2</strong>
-                                        akan mendapatkan uang tunai
-                                        <strong>Rp4.000.000</strong>
-
-                                    </li>
-                                    <li>
-
-                                        <strong>Pemenang 3</strong>
-                                        akan mendapatkan uang tunai
-                                        <strong>Rp3.000.000</strong>
-
-                                    </li>
-                                    <li>
-
-                                        <strong>Pemenang 4</strong>
-                                        akan mendapatkan uang tunai
-                                        <strong>Rp2.000.000</strong>
-
-                                    </li>
-                                    <li>
-
-                                        <strong>Pemenang 5</strong>
-                                        akan mendapatkan uang tunai
-                                        <strong>Rp1.000.000</strong>
-
-                                    </li>
-                                </ul>
-
-                            </li>
-                        </ol>
-
-                    </section>
-
-                    <section>
-                        <h6 class="fw-bold color-custom">Syarat dan Ketentuan Teknis Thrive Blog Competition 2024</h6>
-                        <ol>
-                            <li>
-                                Peserta Thrive Blog Competition 2024 wajib menulis artikel / blog tentang
-                                <strong>ET PC Desktop
-                                    Workstation.</strong>
-
-                            </li>
-                            <li>
-                                Peserta Thrive Blog Competition 2024 dapat memilih satu (1) jenis ET PC Desktop
-                                Workstation yang akan dimuat pada artikel / blog yang akan dipublish, pilihan varian nya
-                                adalah : <strong>ET Station Pro, ET Station One,  ET After Effect dan ET
-                                    Solidworks</strong> (informasi
-                                lengkap tentang masing-masing product ET PC Desktop Workstation dapat dilihat pada:
-                                <a href="https://www.thrive.co.id/product/et-pc-desktop-workstation">
-                                    https://www.thrive.co.id/product/et-pc-desktop-workstation
-                                </a>)
-
-                            </li>
-                            <li>
-                                Artikel / blog Peserta Thrive Blog Competition 2024 wajib mengandung kata kunci
-                                (keywords) yang telah disediakan sebagai berikut:
-                            </li>
-                            <ul>
-                                <li class="fw-bold">PC Kustom Arsitektur
-
-                                </li>
-                                <li class="fw-bold">Komputer Rendering 3D
-
-                                </li>
-                                <li class="fw-bold">Komputer Desain Arsitektur
-
-                                </li>
-                                <li class="fw-bold">PC Kinerja Tinggi untuk Arsitek
-
-                                </li>
-                                <li class="fw-bold">Komputer untuk Render 3D
-
-                                </li>
-                            </ul>
-                            <li>
-                                Artikel / blog harus mengandung 800 - 1000 kata dengan judul artikel yang unik dan
-                                kreatif serta isi konten yang menarik dan informatif tentang ET PC Desktop Workstation.
-
-                            </li>
-                            <li>
-
-                                Artikel / blog
-                                <strong>
-                                    wajib mengandung tautan dofollow (backlink)
-                                </strong>
-                                (<a
-                                    href="https://www.thrive.co.id/product/et-pc-desktop-workstation">https://www.thrive.co.id/product/et-pc-desktop-workstation</a>)
-                                pada anchor text (potongan teks berisi tautan yang dapat diklik).
-
-                            </li>
-                            <li>
-                                Artikel / blog serta tautan dofollow (backlink) harus tetap ada dan tidak boleh diubah
-                                <strong>selama periode Thrive Blog Competition 2024 berlangsung.</strong>
-                            </li>
-                            <li>
-                                Artikel / blog dapat dimuat pada platform UGC seperti
-                                <strong>kompasiana, kaskus, kumparan, dan
-                                    yang lainnya.</strong>
-                            </li>
-                            <li>
-                                Artikel / blog yang akan dipublish
-                                <strong>harus terjaga orisinalitasnya</strong>
-                                , belum pernah
-                                dipublikasikan dan diikutsertakan pada kompetisi sejenis di platform / media tertentu.
-
-                            </li>
-                            <li>
-                                Artikel / blog yang akan dipublish
-                                <strong>dilarang bersifat menghina / menjatuhkan, mengandung
-                                    unsur SARA (Suku, Agama, Ras, Antar Golongan), pornografi, hoax, dan politik, serta
-                                    hal-hal yang bertentangan dengan hukum</strong>
-                                yang ada di Indonesia.
-                            </li>
-                            <li>
-                                Peserta Thrive Blog Competition 2024
-                                <strong>dapat memuat elemen gambar pendukung</strong>
-                                di artikel /
-                                blog yang diikutsertakan dengan tetap memperhatikan hak cipta yang ada.
-                            </li>
-                            <li>
-                                Peserta Thrive Blog Competition 2024
-                                <strong>dapat menulis lebih dari satu artikel / blog</strong>
-                                , baik
-                                pada domain blog yang sama maupun domain blog yang berbeda.
-                            </li>
-                            <li>
-                                Peserta Thrive Blog Competition 2024
-                                <strong>wajib mendaftarkan dirinya dan artikel / blog yang
-                                    telah yang ditulis</strong>
-                                melalui form berikut <a
-                                    href="https://blogcompetition2024.com/">https://blogcompetition2024.com/</a> dengan
-                                mengisi beberapa data pribadi & artikel / blog.
-                            </li>
-                            <li>
-                                Peserta Thrive Blog Competition 2024 <strong>
-                                    wajib follow TikTok (@thrive.itsolutions &
-                                    @thrivecommerce), Instagram (@thrive.itsolutions) dan Youtube (@alphagame3610) serta
-                                    Shopee dan Tokopedia Thrive Commerce</strong>, screenshot bukti follow akan diwajibkan pada form
-                                registrasi.
-
-                            </li>
-                        </ol>
-
-                    </section>
-                </div>
-                <div class="container d-grid">
-                    <button type="button" class="btn btn-custom mb-3" data-bs-dismiss="modal">
-                        Konfirmasi
-                    </button>
-                </div>
+                <button type="button" class="w-100 btn btn-custom my-3" data-bs-dismiss="modal">
+                    CONFIRM
+                </button>
             </div>
         </div>
     </div>
