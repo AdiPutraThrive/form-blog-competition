@@ -22,7 +22,8 @@
     <meta property="og:title" content="Ariston Blog Competition 2024 - Ariston Indonesia">
     <meta property="og:description"
         content="Ikuti Ariston Blog Competition 2024 dan bagikan tips memilih water heater yang baik. Raih kesempatan memenangkan berbagai hadiah menarik bersama Ariston!">
-    <meta property="og:image" content="https://ariston.kleecks-cdn.com/cms/wpmedia/2022/02/14081808/RrY0fuYi-Logo_Ariston_payoff_280x92_OLD.svg">
+    <meta property="og:image"
+        content="https://ariston.kleecks-cdn.com/cms/wpmedia/2022/02/14081808/RrY0fuYi-Logo_Ariston_payoff_280x92_OLD.svg">
     <meta property="og:url" content="https://www.ariston.com/id-id">
     <meta property="og:site_name" content="Ariston Indonesia">
 
@@ -31,7 +32,8 @@
     <meta name="twitter:title" content="Ariston Blog Competition 2024 - Ariston Indonesia">
     <meta name="twitter:description"
         content="Ikuti Ariston Blog Competition 2024 dan bagikan tips memilih water heater yang baik. Raih kesempatan memenangkan berbagai hadiah menarik bersama Ariston!">
-    <meta name="twitter:image" content="https://ariston.kleecks-cdn.com/cms/wpmedia/2022/02/14081808/RrY0fuYi-Logo_Ariston_payoff_280x92_OLD.svg">
+    <meta name="twitter:image"
+        content="https://ariston.kleecks-cdn.com/cms/wpmedia/2022/02/14081808/RrY0fuYi-Logo_Ariston_payoff_280x92_OLD.svg">
     <meta name="twitter:url" content="https://twitter.com/aristonid">
     <meta name="twitter:site" content="@AristonID">
 
@@ -48,15 +50,17 @@
 
     @stack('styles')
     @livewireStyles
-
+    @vite([])
 </head>
 
 <body>
     <div class="container pt-5">
         <header>
+            <img src="{{ asset('/assets/img/Image_Banner.svg') }}" class="img-fluid rounded" width="100%"
+                alt="{{ $title ?? '' }}">
             <div class="card border-responsive my-3">
                 <div class="card-body">
-                    <h6 class="title text-capitalize text-center fw-semibold responsive-font">
+                    <h6 class=" text-capitalize text-center fw-bold text-danger responsive-font">
                         Ariston Indonesia
                         Blog Competition 2024
                     </h6>
